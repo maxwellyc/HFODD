@@ -1,0 +1,13 @@
+#!/bin/bash -login
+#PBS -l nodes=1:ppn=1,walltime=36:00:00,mem=30gb,feature=intel16
+#PBS -j oe
+#PBS -N ra225-une0-blk	
+
+cd ${PBS_O_WORKDIR}
+module swap GNU Intel/16.3
+export OMP_NUM_THREADS=4
+export OMP_STACKSIZE=1024M
+ulimit -s unlimited
+date
+./hf273y <./inputs/ra225-une0-blocking-19.dat > ./outputs/ra225-une0-blocking-19.out
+date

@@ -1,0 +1,128 @@
+
+                      ----------  General data  -----------
+NUCLIDE      IN_FIX  IZ_FIX
+              137      88
+ITERATIONS   NOITER
+              1000
+ITERAT_EPS   EPSITE
+             1.e-5
+SLOW_DOWN    SLOWEV  SLOWOD
+              0.8     0.8
+SLOW_PAIR    SLOWPA
+              0.8
+SLOWLIPKIN   SLOWLI
+              0.8
+BROYDEN      IBROYD  N_ITER  ALPHAM  BROTRI
+               1       7      0.8     0.01
+MAXANTIOSC   NULAST
+               5
+PING-PONG    EPSPNG  NUPING
+              0.01     20
+CHAOTIC      NUCHAO
+               30
+                      -----------  Interaction  -----------
+UNEDF-PROJ   IF_EDF
+               0
+SKYRME-SET   SKYRME
+            sLy4 
+SKYRME-STD   ISTAND  KETA_J  KETA_W  KETACM  KETA_M
+               1       0       1       1       0
+COULOMBPAR   ICOTYP  ICOUDI  ICOUEX
+               7       1       1
+               
+                      ----------    Pairing    ------------
+PAIRING      IPAIRI
+               1
+HFB          IPAHFB
+               1
+CUTOFF       ECUTOF
+              60.0
+BCS          IPABCS
+               0
+PAIRNINTER   PRHO_N  PRHOSN  POWERN
+            -285.634  0.32     1.0
+PAIRPINTER   PRHO_P  PRHOSP  POWERP
+            -285.634  0.32     1.0
+LIPKIN       LIPKIN  LIPKIP
+               0       0
+
+                     -----------  Symmetries  -------------
+ROTATION     IROTAT
+               1
+SIMPLEXY     ISIMPY
+               1
+SIGNATUREY   ISIGNY
+               0
+PARITY       IPARTY
+               0
+TSIMPLEX3D   ISIMTX  ISIMTY  ISIMTZ
+               1       0       0
+
+                     ----  Parameters of the HO basis  ----
+BASIS_SIZE   NOSCIL  NLIMIT ENECUT 
+               20      0    800.0
+HOMEGAZERO   FCHOM0
+              1.2
+OPTI-GAUSS   IOPTGS
+               0
+GAUSHERMIT   NXHERM  NYHERM  NZHERM
+               42      42      42
+SURFAC_PAR   INNUMB  IZNUMB  R0PARM
+               137      88     1.23
+SURFAC_DEF   LAMBDA   MIU    ALPHAR
+               -2      0      0.0
+                4      0      0.0
+                
+                     -----------  Constraints  ------------
+OMEGAY       OMEGAY
+              0.0
+MAX_MULTIP   NMUCON  NMUCOU  NMUPRI
+               3       4       4
+MULTCONSTR   LAMBDA    MIU   STIFFQ   QASKED  IFLAGQ
+               -1       0     0.010     0.0      1
+               -2       0     0.010     15.0      1
+                3       0     0.010     0.5      1
+MAX_SCHIFF
+            0      4
+SCHIFF_MOM
+            1
+                     ------  Output-file  parameters  -----
+ONE_LINE     I1LINE
+               1
+EALLMINMAX   EMINAL  EMAXAL
+              -70.    10.
+
+                     --------------  Blocking  ---------------
+BLOCKSIM_N
+               69     1     1
+BLOCKFIX_N   IFIBLN  INIBLN
+               1      1
+!NOBLOLIPKI
+!               1      0                     
+                     --------------  Files  ---------------
+REVIEW       IREVIE
+               1
+RECORDSAVE   IWRIRE
+              -1
+COULOMSAVE   ICOULI  ICOULO
+                1       0
+REVIEWFILE   FILREV
+            ra225_sly4_blocking_00.rev
+REPLAYFILE   FILREP
+            ../nb-ra225-sly4-nln2.rec
+COULOMFILE   FILCOU
+            ../nb-ra225-sly4-nln2.cou
+REPLIPFILE   FILLIP
+            ../nb-ra225-sly4-nln2.lic
+ 
+                     ------  Starting the iteration  ------
+RESTART      ICONTI
+               0
+CONT_PAIRI   IPCONT
+               0
+CONTLIPKIN   ILCONT
+               0
+                     ------------  Calculate  -------------
+EXECUTE
+                     ------------  Terminate  -------------
+ALL_DONE
